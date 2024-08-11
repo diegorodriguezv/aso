@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# copy to /var/lib/webosbrew/init.d/
+
+mount -t overlay overlay -olowerdir=/etc/systemd/system:/home/root/aso/system /etc/systemd/system
+systemctl daemon-reload
+systemctl restart aso-on
+systemctl restart aso-off

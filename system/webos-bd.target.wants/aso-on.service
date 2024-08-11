@@ -1,0 +1,9 @@
+[Unit]
+Description=aso on - turn on screen if it changes
+
+[Service]
+Type=simple
+ExecStart=watch -n 1 /home/root/aso/aso.sh on
+
+[Install]
+WantedBy=webos-bd.target

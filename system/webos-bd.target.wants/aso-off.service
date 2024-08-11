@@ -1,0 +1,9 @@
+[Unit]
+Description=aso off - turn off the screen if no change detected
+
+[Service]
+Type=simple
+ExecStart=watch -n 30 /home/root/aso/aso.sh off
+
+[Install]
+WantedBy=webos-bd.target
